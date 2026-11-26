@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ashley's Code Tutor</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="at-home">
+  <div id="home"></div>
+  <div id="select"></div>
+  <div id="prefs" hidden></div>
+  <div id="about" hidden></div>
+
+  <div id="topbar">
+    <button id="home-btn" class="tb-btn" title="Choose a language (⌘⇧L)">‹ Languages</button>
+    <div id="track-name"></div>
+    <div class="tb-spacer"></div>
+    <button id="char-btn" class="tb-char"></button>
+    <button id="run-btn" class="tb-run" title="Run (⌘R)">▶ Run</button>
+    <button id="stop-btn" class="tb-stop" title="Stop (⌘.)" hidden>■ Stop</button>
+  </div>
+
+  <div id="workspace">
+    <section id="editor-pane">
+      <div id="tabs"></div>
+      <div id="editor"></div>
+    </section>
+    <div id="split-v" class="splitter-v"></div>
+    <section id="right">
+      <div id="output"></div>
+      <div id="split-h" class="splitter-h"></div>
+      <div id="chat"></div>
+    </section>
+    <nav id="rail">
+      <div class="rail-head"><span class="rail-title">LESSONS</span><span id="rail-progress"></span><button id="rail-toggle" title="Collapse lesson tabs (⌥⌘B)">⇥</button></div>
+      <div id="lessons"></div>
+    </nav>
+  </div>
+
+  <footer id="statusbar">
+    <div class="sb-item sb-brand">ACT</div>
+    <div class="sb-item sb-click" id="status-problems"></div>
+    <div class="sb-item" id="status-lesson"></div>
+    <div class="sb-item" id="status-run"></div>
+    <div class="sb-spacer"></div>
+    <div class="sb-item" id="status-pos"></div>
+    <div class="sb-item">Spaces: 4</div>
+    <div class="sb-item">UTF-8</div>
+    <div class="sb-item">LF</div>
+    <div class="sb-item" id="status-lang"></div>
+    <div class="sb-item sb-click" id="status-model"></div>
+  </footer>
+
+  <script src="vendor/marked/marked.min.js"></script>
+  <script src="vendor/monaco/vs/loader.js"></script>
+  <script src="js/roadmaps.js"></script>
+  <script src="js/characters-data.js"></script>
+  <script src="js/native.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/themes.js"></script>
+  <script src="js/appicon.js"></script>
+  <script src="js/characters.js"></script>
+  <script src="js/languages.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/typewriter.js"></script>
+  <script src="js/output.js"></script>
+  <script src="js/prompts.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/select.js"></script>
+  <script src="js/prefs.js"></script>
+  <script src="js/about.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

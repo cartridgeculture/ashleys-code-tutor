@@ -1,0 +1,1122 @@
+{
+  "c": {
+    "name": "C",
+    "blurb": "The language under almost everything, including Genesis games written with SGDK. The best place to start.",
+    "lessons": [
+      {
+        "id": "c-01",
+        "title": "Hello, World",
+        "goals": [
+          "Know what a program, a compiler, and running are",
+          "Write and run a program that prints a message with printf",
+          "Use \\n to start a new line"
+        ]
+      },
+      {
+        "id": "c-02",
+        "title": "Comments and Mistakes",
+        "goals": [
+          "Write // and /* */ comments",
+          "Read a compiler error and find the line it points to",
+          "Tell errors and warnings apart, and fix both"
+        ]
+      },
+      {
+        "id": "c-03",
+        "title": "Variables and Types",
+        "goals": [
+          "Declare and assign int, char, and double variables",
+          "Print values with %d, %c, and %f",
+          "Explain what a type is and why C needs it"
+        ]
+      },
+      {
+        "id": "c-04",
+        "title": "Math and Operators",
+        "goals": [
+          "Use + - * / and %",
+          "Predict integer division and remainder results",
+          "Use ++, --, += and operator precedence"
+        ]
+      },
+      {
+        "id": "c-05",
+        "title": "Reading Input",
+        "goals": [
+          "Read numbers with scanf and the & sign",
+          "Type input into the terminal while a program runs",
+          "Build a tiny calculator"
+        ]
+      },
+      {
+        "id": "c-06",
+        "title": "Decisions: if and else",
+        "goals": [
+          "Compare values with == != < > <= >=",
+          "Combine conditions with && || !",
+          "Know that 0 means false and anything else means true"
+        ]
+      },
+      {
+        "id": "c-07",
+        "title": "Loops: while and for",
+        "goals": [
+          "Repeat code with while and for",
+          "Trace a loop by hand, step by step",
+          "Stop a stuck infinite loop and understand why it happened"
+        ]
+      },
+      {
+        "id": "c-08",
+        "title": "switch, break and continue",
+        "goals": [
+          "Choose between cases with switch",
+          "Leave or skip loop steps with break and continue",
+          "Write a menu-driven program"
+        ]
+      },
+      {
+        "id": "c-09",
+        "title": "Functions",
+        "goals": [
+          "Define and call functions with parameters and return values",
+          "Explain local scope",
+          "Declare a function before it's used (prototypes)"
+        ]
+      },
+      {
+        "id": "c-10",
+        "title": "Arrays",
+        "goals": [
+          "Create arrays and index them from 0",
+          "Loop over an array",
+          "Recognize an out-of-bounds bug and the error it causes"
+        ]
+      },
+      {
+        "id": "c-11",
+        "title": "Characters and Strings",
+        "goals": [
+          "Store text in char arrays",
+          "Explain the '\\0' terminator",
+          "Use strlen, strcpy, and strcmp safely"
+        ]
+      },
+      {
+        "id": "c-12",
+        "title": "Binary, Hex and Bits",
+        "goals": [
+          "Convert between decimal, binary, and hexadecimal",
+          "Use & | ^ ~ << >> on numbers",
+          "Pack on/off flags into one number with masks"
+        ]
+      },
+      {
+        "id": "c-13",
+        "title": "Memory and Addresses",
+        "goals": [
+          "Picture memory as numbered boxes",
+          "Get an address with & and a size with sizeof",
+          "Explain how a variable is laid out in bytes"
+        ]
+      },
+      {
+        "id": "c-14",
+        "title": "Pointers",
+        "goals": [
+          "Declare a pointer and dereference it with *",
+          "Walk through an array with a pointer",
+          "Explain NULL and why using it crashes"
+        ]
+      },
+      {
+        "id": "c-15",
+        "title": "Pointers and Functions",
+        "goals": [
+          "Let a function change a variable through a pointer",
+          "Write a swap function",
+          "Use const to promise not to change data"
+        ]
+      },
+      {
+        "id": "c-16",
+        "title": "Structs",
+        "goals": [
+          "Group related data into a struct",
+          "Use . and -> to reach fields",
+          "Keep an array of game objects"
+        ]
+      },
+      {
+        "id": "c-17",
+        "title": "Exact-size Integers and Overflow",
+        "goals": [
+          "Use uint8_t, int16_t, uint32_t from stdint.h",
+          "Predict what happens when a number overflows",
+          "Choose signed or unsigned deliberately"
+        ]
+      },
+      {
+        "id": "c-18",
+        "title": "Dynamic Memory",
+        "goals": [
+          "Allocate and free memory with malloc and free",
+          "Recognize leaks and use-after-free bugs",
+          "Understand why console games avoid malloc"
+        ]
+      },
+      {
+        "id": "c-19",
+        "title": "Multiple Files and Headers",
+        "goals": [
+          "Split code into .c and .h files",
+          "Use #include, #define, and include guards",
+          "Explain what the compiler and linker each do"
+        ]
+      },
+      {
+        "id": "c-20",
+        "title": "Project: A Game Loop",
+        "goals": [
+          "Plan a small terminal game before coding it",
+          "Combine structs, loops, functions, and input",
+          "Debug it by reading output and errors"
+        ]
+      }
+    ]
+  },
+  "cpp": {
+    "name": "C++",
+    "blurb": "C plus classes, strings, and a big standard library. Used for most modern games and tools.",
+    "lessons": [
+      {
+        "id": "cpp-01",
+        "title": "Hello, C++",
+        "goals": [
+          "Print with std::cout and read with std::cin",
+          "Explain namespaces and std::",
+          "Know what C++ adds to C"
+        ]
+      },
+      {
+        "id": "cpp-02",
+        "title": "Variables, auto and References",
+        "goals": [
+          "Use auto sensibly",
+          "Create references and compare them to pointers",
+          "Use const everywhere it fits"
+        ]
+      },
+      {
+        "id": "cpp-03",
+        "title": "std::string",
+        "goals": [
+          "Build, join, and compare strings",
+          "Read a whole line with std::getline",
+          "Explain why std::string is safer than char arrays"
+        ]
+      },
+      {
+        "id": "cpp-04",
+        "title": "std::vector",
+        "goals": [
+          "Store a growing list in a vector",
+          "Loop over it with range-for",
+          "Add, remove, and look up items"
+        ]
+      },
+      {
+        "id": "cpp-05",
+        "title": "Functions, Overloads and Defaults",
+        "goals": [
+          "Overload a function by parameter types",
+          "Use default arguments",
+          "Pass by value, by reference, and by const reference"
+        ]
+      },
+      {
+        "id": "cpp-06",
+        "title": "Classes and Objects",
+        "goals": [
+          "Write a class with data and methods",
+          "Use public and private",
+          "Explain what an object is"
+        ]
+      },
+      {
+        "id": "cpp-07",
+        "title": "Constructors and Destructors",
+        "goals": [
+          "Initialize objects with constructors",
+          "Clean up in destructors",
+          "Explain RAII and why it prevents leaks"
+        ]
+      },
+      {
+        "id": "cpp-08",
+        "title": "Operator Overloading",
+        "goals": [
+          "Write a Vec2 type with + and * operators",
+          "Print your own types with <<",
+          "Know when operator overloading helps or hurts"
+        ]
+      },
+      {
+        "id": "cpp-09",
+        "title": "Inheritance and Virtual Functions",
+        "goals": [
+          "Derive classes from a base class",
+          "Override virtual functions",
+          "Store different game entities in one list"
+        ]
+      },
+      {
+        "id": "cpp-10",
+        "title": "Smart Pointers",
+        "goals": [
+          "Own objects with std::unique_ptr",
+          "Share them with std::shared_ptr",
+          "Explain ownership"
+        ]
+      },
+      {
+        "id": "cpp-11",
+        "title": "Templates",
+        "goals": [
+          "Write a template function",
+          "Write a simple template class",
+          "Read template error messages"
+        ]
+      },
+      {
+        "id": "cpp-12",
+        "title": "Algorithms and Lambdas",
+        "goals": [
+          "Sort and search with <algorithm>",
+          "Write lambdas",
+          "Pick the right algorithm instead of writing loops"
+        ]
+      },
+      {
+        "id": "cpp-13",
+        "title": "Maps and Sets",
+        "goals": [
+          "Look up values by key with std::map and std::unordered_map",
+          "Keep unique items in a set",
+          "Choose a container for a job"
+        ]
+      },
+      {
+        "id": "cpp-14",
+        "title": "Errors and Exceptions",
+        "goals": [
+          "Throw and catch exceptions",
+          "Use return values or std::optional instead when better",
+          "Know why games often turn exceptions off"
+        ]
+      },
+      {
+        "id": "cpp-15",
+        "title": "Organizing a Project",
+        "goals": [
+          "Split classes into headers and source files",
+          "Use namespaces for your own code",
+          "Keep a project easy to read"
+        ]
+      },
+      {
+        "id": "cpp-16",
+        "title": "Project: A Tiny Game Engine",
+        "goals": [
+          "Design entities with update and draw steps",
+          "Run them in a fixed-step game loop",
+          "Extend it with a new entity type"
+        ]
+      }
+    ]
+  },
+  "sgdk": {
+    "name": "SGDK: C on the Genesis",
+    "blurb": "Make real Sega Genesis games in C with SGDK. The fastest way to see your own game on a Genesis.",
+    "needs": "C lessons 1–16",
+    "lessons": [
+      {
+        "id": "sgdk-01",
+        "title": "What SGDK Is",
+        "goals": [
+          "Explain how C becomes a Genesis ROM",
+          "Know what SGDK gives you and what it hides",
+          "Show text on screen with VDP_drawText"
+        ]
+      },
+      {
+        "id": "sgdk-02",
+        "title": "The Main Loop and VBlank",
+        "goals": [
+          "Explain frames and vertical blank (60 Hz NTSC / 50 Hz PAL)",
+          "Write a main loop with SYS_doVBlankProcess",
+          "Count frames on screen"
+        ]
+      },
+      {
+        "id": "sgdk-03",
+        "title": "Tiles and Palettes",
+        "goals": [
+          "Explain 8×8 tiles and 4-bit color",
+          "Explain the 4 palettes of 16 colors",
+          "Change colors with PAL_setColor"
+        ]
+      },
+      {
+        "id": "sgdk-04",
+        "title": "Backgrounds and Planes",
+        "goals": [
+          "Explain planes A and B and the window",
+          "Import an image with rescomp",
+          "Draw a background on a plane"
+        ]
+      },
+      {
+        "id": "sgdk-05",
+        "title": "Reading the Controller",
+        "goals": [
+          "Read buttons with JOY_readJoypad",
+          "Use a joypad event handler",
+          "Tell 'held' from 'just pressed'"
+        ]
+      },
+      {
+        "id": "sgdk-06",
+        "title": "Sprites",
+        "goals": [
+          "Import a sprite sheet",
+          "Show and animate a sprite with the SPR engine",
+          "Know the hardware sprite limits"
+        ]
+      },
+      {
+        "id": "sgdk-07",
+        "title": "Moving a Character",
+        "goals": [
+          "Move with position and velocity",
+          "Use fixed-point numbers (fix16) instead of floats",
+          "Add gravity and jumping"
+        ]
+      },
+      {
+        "id": "sgdk-08",
+        "title": "Scrolling",
+        "goals": [
+          "Scroll a plane horizontally and vertically",
+          "Make parallax with two planes",
+          "Follow the player with a camera"
+        ]
+      },
+      {
+        "id": "sgdk-09",
+        "title": "Collision",
+        "goals": [
+          "Check box-against-box collision",
+          "Collide with a tile map",
+          "Respond to collisions without getting stuck"
+        ]
+      },
+      {
+        "id": "sgdk-10",
+        "title": "Sound and Music",
+        "goals": [
+          "Play music with XGM",
+          "Play sound effects",
+          "Know what the Z80 and YM2612 do"
+        ]
+      },
+      {
+        "id": "sgdk-11",
+        "title": "Game States",
+        "goals": [
+          "Switch between title, game, and game over screens",
+          "Reset cleanly between states",
+          "Keep state code organized"
+        ]
+      },
+      {
+        "id": "sgdk-12",
+        "title": "Maps with Tiled",
+        "goals": [
+          "Draw a level in Tiled",
+          "Load it with rescomp",
+          "Scroll through a large map"
+        ]
+      },
+      {
+        "id": "sgdk-13",
+        "title": "Speed on a 7.6 MHz CPU",
+        "goals": [
+          "Measure how long a frame's work takes",
+          "Avoid division, floats, and wasted work",
+          "Use DMA well"
+        ]
+      },
+      {
+        "id": "sgdk-14",
+        "title": "Looking Under the Hood",
+        "goals": [
+          "Read the 68000 assembly your C turns into",
+          "Connect C statements to instructions",
+          "Spot slow code by reading assembly"
+        ]
+      },
+      {
+        "id": "sgdk-15",
+        "title": "Mixing C and Assembly",
+        "goals": [
+          "Call an assembly routine from C",
+          "Pass arguments between them",
+          "Decide when assembly is worth it"
+        ]
+      },
+      {
+        "id": "sgdk-16",
+        "title": "Project: A Small Genesis Game",
+        "goals": [
+          "Plan a one-screen game",
+          "Build it with sprites, input, collision, and sound",
+          "Test it on an accurate emulator"
+        ]
+      }
+    ]
+  },
+  "m68k": {
+    "name": "68000 Assembly (Sega Genesis)",
+    "blurb": "Talk to the Genesis directly in the language its games were written in. The path to homebrew and Sonic hacking.",
+    "needs": "C lessons 1–12 help a lot",
+    "lessons": [
+      {
+        "id": "m68k-01",
+        "title": "How a Computer Runs Code",
+        "goals": [
+          "Picture the CPU, memory, and instructions",
+          "Explain what assembly and an assembler are",
+          "Know how source code becomes a ROM that runs"
+        ]
+      },
+      {
+        "id": "m68k-02",
+        "title": "Binary and Hexadecimal",
+        "goals": [
+          "Count in binary and hex ($ and % notation)",
+          "Read hex as shorthand for groups of 4 bits",
+          "Know bits, nybbles, bytes, words, and longwords"
+        ]
+      },
+      {
+        "id": "m68k-03",
+        "title": "Memory and Addresses",
+        "goals": [
+          "Picture memory as numbered bytes",
+          "Explain big-endian byte order",
+          "Know the Genesis memory map in outline (ROM, RAM at $FF0000, hardware)"
+        ]
+      },
+      {
+        "id": "m68k-04",
+        "title": "Registers",
+        "goals": [
+          "Name D0–D7, A0–A7, PC and SR",
+          "Know that A7 is the stack pointer",
+          "Know what each kind of register is for"
+        ]
+      },
+      {
+        "id": "m68k-05",
+        "title": "move and Sizes",
+        "goals": [
+          "Use move.b, move.w and move.l",
+          "Tell #immediate numbers from memory addresses",
+          "Predict what a byte or word write leaves in a register"
+        ]
+      },
+      {
+        "id": "m68k-06",
+        "title": "Addressing Modes I",
+        "goals": [
+          "Use Dn, An, #imm, absolute and (An)",
+          "Load addresses with lea",
+          "Read a value from a table"
+        ]
+      },
+      {
+        "id": "m68k-07",
+        "title": "Addressing Modes II",
+        "goals": [
+          "Use (An)+, -(An), d(An) and d(An,Xn)",
+          "Use PC-relative addressing",
+          "Walk through a list of records"
+        ]
+      },
+      {
+        "id": "m68k-08",
+        "title": "Arithmetic",
+        "goals": [
+          "Use add, sub, addq, subq, addi, neg",
+          "Use ext, clr, swap and exg",
+          "Know when a quick form (addq, moveq) applies"
+        ]
+      },
+      {
+        "id": "m68k-09",
+        "title": "The Condition Codes",
+        "goals": [
+          "Explain the X N Z V C flags",
+          "Know which instructions set them",
+          "Use tst and cmp"
+        ]
+      },
+      {
+        "id": "m68k-10",
+        "title": "Branching",
+        "goals": [
+          "Branch with bra and Bcc",
+          "Choose signed (bgt, blt) vs unsigned (bhi, bcs) branches",
+          "Turn an if/else into assembly"
+        ]
+      },
+      {
+        "id": "m68k-11",
+        "title": "Loops with dbra",
+        "goals": [
+          "Write counting loops with dbra",
+          "Explain why you load the count minus one",
+          "Loop over a table and sum it"
+        ]
+      },
+      {
+        "id": "m68k-12",
+        "title": "Bits and Shifts",
+        "goals": [
+          "Use and, or, eor, not, btst, bset, bclr",
+          "Shift and rotate with lsl, lsr, asl, asr, rol",
+          "Multiply and divide by powers of two with shifts"
+        ]
+      },
+      {
+        "id": "m68k-13",
+        "title": "Multiply and Divide",
+        "goals": [
+          "Use mulu, muls, divu, divs and their sizes",
+          "Know what they cost in cycles",
+          "Avoid them where speed matters"
+        ]
+      },
+      {
+        "id": "m68k-14",
+        "title": "Subroutines and the Stack",
+        "goals": [
+          "Call code with bsr/jsr and return with rts",
+          "Push and pop with the stack pointer",
+          "Save and restore registers with movem"
+        ]
+      },
+      {
+        "id": "m68k-15",
+        "title": "Directives, Data and Tables",
+        "goals": [
+          "Use labels, equ, dc.b/dc.w/dc.l and even",
+          "Lay out records with offsets",
+          "Use lookup tables and jump tables"
+        ]
+      },
+      {
+        "id": "m68k-16",
+        "title": "Anatomy of a Genesis ROM",
+        "goals": [
+          "Lay out the vector table and ROM header",
+          "Explain TMSS and the 'SEGA' handshake",
+          "Know which header fields the console checks"
+        ]
+      },
+      {
+        "id": "m68k-17",
+        "title": "Booting the Genesis",
+        "goals": [
+          "Write the startup code step by step",
+          "Explain each step instead of copying it",
+          "Know what emulators forgive that real hardware doesn't"
+        ]
+      },
+      {
+        "id": "m68k-18",
+        "title": "Talking to the VDP",
+        "goals": [
+          "Use the VDP control and data ports",
+          "Set VDP registers",
+          "Build VRAM, CRAM, and VSRAM command words"
+        ]
+      },
+      {
+        "id": "m68k-19",
+        "title": "Colors and Palettes",
+        "goals": [
+          "Encode a color in CRAM format",
+          "Load a 16-color palette",
+          "Turn the whole screen a color"
+        ]
+      },
+      {
+        "id": "m68k-20",
+        "title": "Tiles, Planes and Hello World",
+        "goals": [
+          "Draw an 8×8 tile in 4-bit pixels",
+          "Explain planes and nametable entries",
+          "Load a font and print 'Hello World'"
+        ]
+      },
+      {
+        "id": "m68k-21",
+        "title": "Sprites",
+        "goals": [
+          "Fill in the sprite attribute table",
+          "Use size bits and the link field",
+          "Show a sprite"
+        ]
+      },
+      {
+        "id": "m68k-22",
+        "title": "VBlank and the Game Loop",
+        "goals": [
+          "Set up a vertical blank interrupt",
+          "Wait for VBlank in the main loop",
+          "Know what work belongs in VBlank"
+        ]
+      },
+      {
+        "id": "m68k-23",
+        "title": "Reading the Controller",
+        "goals": [
+          "Read a 3-button pad through the I/O ports",
+          "Tell held from just pressed",
+          "Move a sprite with the D-pad"
+        ]
+      },
+      {
+        "id": "m68k-24",
+        "title": "DMA and Animation",
+        "goals": [
+          "Copy to VRAM with DMA",
+          "Know when DMA is safe and how much fits in a frame",
+          "Animate a sprite"
+        ]
+      },
+      {
+        "id": "m68k-25",
+        "title": "Scrolling",
+        "goals": [
+          "Scroll planes with the H-scroll table and VSRAM",
+          "Use full, cell, and line scroll modes",
+          "Make a scrolling starfield"
+        ]
+      },
+      {
+        "id": "m68k-26",
+        "title": "Sound Basics",
+        "goals": [
+          "Make tones and noise with the PSG",
+          "Request and release the Z80 bus",
+          "Know what sound drivers do and which you may use"
+        ]
+      },
+      {
+        "id": "m68k-27",
+        "title": "Game Structure",
+        "goals": [
+          "Store objects as fixed-size records in RAM",
+          "Run each object's code every frame with a state machine",
+          "Check collisions and make pseudo-random numbers"
+        ]
+      },
+      {
+        "id": "m68k-28",
+        "title": "Project: Pong in Assembly",
+        "goals": [
+          "Plan Pong before coding it",
+          "Build it with sprites, input, collision and sound",
+          "Compare it with a version written in C"
+        ]
+      }
+    ]
+  },
+  "sonic": {
+    "name": "Sonic ROM Hacking",
+    "blurb": "Take apart the Sonic disassemblies and change them properly, understanding every edit.",
+    "needs": "68000 lessons 1–22",
+    "lessons": [
+      {
+        "id": "sonic-01",
+        "title": "ROMs and Disassemblies",
+        "goals": [
+          "Explain what a disassembly is",
+          "Know why hackers edit source instead of ROMs",
+          "Know the Sonic 1, 2 and 3&K repositories"
+        ]
+      },
+      {
+        "id": "sonic-02",
+        "title": "Setting Up",
+        "goals": [
+          "Clone a disassembly and build it",
+          "Check the build matches the original ROM exactly",
+          "Run it in an emulator with a debugger"
+        ]
+      },
+      {
+        "id": "sonic-03",
+        "title": "Git Habits",
+        "goals": [
+          "Commit before every change",
+          "Read a diff and undo a change",
+          "Find the change that broke a build"
+        ]
+      },
+      {
+        "id": "sonic-04",
+        "title": "Touring the Code",
+        "goals": [
+          "Read the folder layout and main source file",
+          "Follow the main loop and game modes",
+          "Search for a label and follow it"
+        ]
+      },
+      {
+        "id": "sonic-05",
+        "title": "First Edits",
+        "goals": [
+          "Change starting rings and lives",
+          "Change a speed constant and predict the result",
+          "Rebuild and test every time"
+        ]
+      },
+      {
+        "id": "sonic-06",
+        "title": "The RAM Map",
+        "goals": [
+          "Find the player's object fields",
+          "Find important global variables",
+          "Watch RAM change in a debugger"
+        ]
+      },
+      {
+        "id": "sonic-07",
+        "title": "Palettes",
+        "goals": [
+          "Find and edit palette data",
+          "Explain palette cycling",
+          "Change a zone's colors"
+        ]
+      },
+      {
+        "id": "sonic-08",
+        "title": "Art and Mappings",
+        "goals": [
+          "Explain Nemesis and Kosinski compression",
+          "Explain sprite mappings and DPLCs",
+          "Edit art with Flex 2 or ClownMapEd"
+        ]
+      },
+      {
+        "id": "sonic-09",
+        "title": "Levels",
+        "goals": [
+          "Explain chunks, blocks and layouts",
+          "Edit a level with SonLVL",
+          "Explain where collision data lives"
+        ]
+      },
+      {
+        "id": "sonic-10",
+        "title": "Objects",
+        "goals": [
+          "Explain object slots and status table fields",
+          "Follow an object's routine counter",
+          "Change a badnik's behavior"
+        ]
+      },
+      {
+        "id": "sonic-11",
+        "title": "Player Physics",
+        "goals": [
+          "Read Sonic's movement code alongside the Sonic Physics Guide",
+          "Explain sensors, slopes and jumping",
+          "Change jump height properly"
+        ]
+      },
+      {
+        "id": "sonic-12",
+        "title": "Following a Guide Critically",
+        "goals": [
+          "Apply a guide (like the Sonic 1 Spin Dash) to the right disassembly version",
+          "Understand every line you add",
+          "Spot the limitations a guide introduces"
+        ]
+      },
+      {
+        "id": "sonic-13",
+        "title": "Debugging Crashes",
+        "goals": [
+          "Install an error handler",
+          "Read an exception screen",
+          "Trace a crash back to its cause"
+        ]
+      },
+      {
+        "id": "sonic-14",
+        "title": "Fixing Bugs Properly",
+        "goals": [
+          "Apply common Sonic 1/2 bug fixes",
+          "Explain why each bug happened",
+          "Know branch-range, alignment and RAM-limit errors"
+        ]
+      },
+      {
+        "id": "sonic-15",
+        "title": "A New Ability or Object",
+        "goals": [
+          "Design something small (for example an air dash)",
+          "Give it art, mappings and code",
+          "Fit it into object RAM and VRAM safely"
+        ]
+      },
+      {
+        "id": "sonic-16",
+        "title": "Sound and Shipping",
+        "goals": [
+          "Explain what SMPS is and its limits",
+          "Make a patch file (BPS/IPS) for release",
+          "Test on accurate emulators and write release notes"
+        ]
+      }
+    ]
+  },
+  "nes": {
+    "name": "6502 Assembly (NES)",
+    "blurb": "Program the Nintendo Entertainment System in 6502 assembly: tiles, sprites, the controller and sound, ending with a tiny game.",
+    "needs": "C lessons 1–12 help a lot",
+    "lessons": [
+      {
+        "id": "nes-01",
+        "title": "How the NES Runs a Game",
+        "goals": [
+          "Picture the NES's parts: the CPU (a 6502 inside the Ricoh 2A03), the PPU that draws the picture, RAM, and the cartridge",
+          "Know what PRG ROM (code) and CHR ROM (graphics) are",
+          "Explain what assembly, an assembler and a linker do"
+        ]
+      },
+      {
+        "id": "nes-02",
+        "title": "Binary, Hex and Bytes",
+        "goals": [
+          "Count in binary and hex and read $ and % notation",
+          "Know that the 6502 works in bytes and that addresses are 16 bits",
+          "Read a byte as unsigned (0–255) or signed (−128 to 127)"
+        ]
+      },
+      {
+        "id": "nes-03",
+        "title": "Registers and Your First Instructions",
+        "goals": [
+          "Know the A, X and Y registers and what each is for",
+          "Use LDA, LDX, LDY, STA, STX and STY",
+          "Tell immediate (#) values from memory addresses"
+        ]
+      },
+      {
+        "id": "nes-04",
+        "title": "The Toolchain: ca65 and ld65",
+        "goals": [
+          "Know what segments are and why NES programs use them",
+          "Write an iNES header and explain each byte",
+          "Read a linker config for an NROM cartridge and know how a .nes file gets built"
+        ]
+      },
+      {
+        "id": "nes-05",
+        "title": "The NES Memory Map",
+        "goals": [
+          "Know where RAM, the zero page and the stack live",
+          "Find the PPU registers ($2000–$2007) and the APU and controller registers ($4000s)",
+          "Explain the reset, NMI and IRQ vectors at $FFFA–$FFFF"
+        ]
+      },
+      {
+        "id": "nes-06",
+        "title": "Flags and Arithmetic",
+        "goals": [
+          "Know the N, V, Z and C flags and which instructions change them",
+          "Add and subtract with ADC and SBC, using CLC and SEC correctly",
+          "Use INC, DEC, INX, INY, DEX and DEY"
+        ]
+      },
+      {
+        "id": "nes-07",
+        "title": "Comparing and Branching",
+        "goals": [
+          "Compare with CMP, CPX and CPY and read the result from the flags",
+          "Branch with BEQ, BNE, BCC, BCS, BMI and BPL",
+          "Write a counting loop and know a branch's −128 to +127 byte range"
+        ]
+      },
+      {
+        "id": "nes-08",
+        "title": "Addressing Modes",
+        "goals": [
+          "Use zero page and absolute addressing and know why zero page is faster",
+          "Step through tables with indexed modes (,X and ,Y)",
+          "Use pointers with indirect indexed addressing: (zp),Y"
+        ]
+      },
+      {
+        "id": "nes-09",
+        "title": "Subroutines and the Stack",
+        "goals": [
+          "Call and return with JSR and RTS",
+          "Save and restore registers with PHA, PLA, PHP and PLP",
+          "Explain what the stack page ($0100–$01FF) holds and why it must balance"
+        ]
+      },
+      {
+        "id": "nes-10",
+        "title": "Bits and Logic",
+        "goals": [
+          "Mask and combine bits with AND, ORA and EOR",
+          "Shift and rotate with ASL, LSR, ROL and ROR",
+          "Test bits with BIT and know why the NES uses bit flags everywhere"
+        ]
+      },
+      {
+        "id": "nes-11",
+        "title": "Booting the NES",
+        "goals": [
+          "Write a reset handler: interrupts off, stack set, PPU and APU quiet",
+          "Wait for the PPU to warm up with two vblank waits",
+          "Clear RAM and explain why each step is needed"
+        ]
+      },
+      {
+        "id": "nes-12",
+        "title": "How the PPU Draws Tiles",
+        "goals": [
+          "Know pattern tables, 8×8 tiles and the 2-bit-per-pixel CHR format",
+          "Use PPUCTRL, PPUMASK and PPUSTATUS",
+          "Write to PPU memory through PPUADDR and PPUDATA, and reset the address latch"
+        ]
+      },
+      {
+        "id": "nes-13",
+        "title": "Palettes and Color",
+        "goals": [
+          "Know the NES palette and the 32 bytes of palette memory at $3F00",
+          "Load background and sprite palettes",
+          "Turn rendering on and see your first colors"
+        ]
+      },
+      {
+        "id": "nes-14",
+        "title": "Backgrounds: Nametables",
+        "goals": [
+          "Know the 32×30 nametable and its address math",
+          "Use attribute tables to pick palettes for 16×16 areas",
+          "Draw a screen of tiles and a line of text"
+        ]
+      },
+      {
+        "id": "nes-15",
+        "title": "Vblank and the NMI",
+        "goals": [
+          "Explain vertical blank and why the PPU is only safe to change then",
+          "Write an NMI handler and enable NMIs in PPUCTRL",
+          "Build a once-per-frame main loop and reset the scroll"
+        ]
+      },
+      {
+        "id": "nes-16",
+        "title": "Sprites",
+        "goals": [
+          "Know OAM and the 4 bytes of a sprite (Y, tile, attributes, X)",
+          "Keep a shadow copy of OAM in RAM and send it with OAM DMA ($4014)",
+          "Show, hide and flip sprites and know the 8-sprites-per-line limit"
+        ]
+      },
+      {
+        "id": "nes-17",
+        "title": "Reading the Controller",
+        "goals": [
+          "Strobe and read the controller through $4016",
+          "Pack the 8 buttons into one byte",
+          "Detect new presses versus held buttons"
+        ]
+      },
+      {
+        "id": "nes-18",
+        "title": "Moving a Character",
+        "goals": [
+          "Move a sprite with the D-pad, once per frame",
+          "Keep it on the screen",
+          "Organize the game loop: read input, update, then let the NMI draw"
+        ]
+      },
+      {
+        "id": "nes-19",
+        "title": "Metasprites and Animation",
+        "goals": [
+          "Build a character from several sprites with a metasprite table",
+          "Animate with a frame counter and a table of frames",
+          "Flip a metasprite to face left and right"
+        ]
+      },
+      {
+        "id": "nes-20",
+        "title": "Collisions",
+        "goals": [
+          "Check two boxes for overlap with comparisons",
+          "Handle 8-bit wraparound safely",
+          "React to a hit: score, sound or reset"
+        ]
+      },
+      {
+        "id": "nes-21",
+        "title": "Scrolling",
+        "goals": [
+          "Use PPUSCROLL and the nametable bits in PPUCTRL",
+          "Know vertical and horizontal mirroring and what the iNES header sets",
+          "Scroll a background smoothly"
+        ]
+      },
+      {
+        "id": "nes-22",
+        "title": "Sound with the APU",
+        "goals": [
+          "Know the APU's channels: two pulses, triangle, noise and DMC",
+          "Play a tone on a pulse channel and pick its pitch",
+          "Make a short sound effect that plays over several frames"
+        ]
+      },
+      {
+        "id": "nes-23",
+        "title": "Organizing a Bigger Program",
+        "goals": [
+          "Use constants, zero-page variables, .proc scopes and include files",
+          "Write a macro and know when a subroutine is better",
+          "Lay out a project so it stays readable"
+        ]
+      },
+      {
+        "id": "nes-24",
+        "title": "Your First NES Game",
+        "goals": [
+          "Combine everything into a tiny complete game",
+          "Review what was built and why each part works",
+          "Know the next steps: mappers, music engines, more tools"
+        ]
+      }
+    ]
+  }
+}

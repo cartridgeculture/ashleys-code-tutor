@@ -1,0 +1,27 @@
+{
+  "sheet": "sheet.png",
+  "background": [181, 165, 213],
+  "reference": "normal",
+  "avatar": { "emotion": "normal", "frame": 0, "size": 52, "x": 24, "y": 18 },
+  "emotions": [
+    { "name": "normal",     "label": "Normal",     "boxes": [[0, 996, 860, 1168]],  "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] },
+    { "name": "glum",       "label": "Glum",       "boxes": [[0, 220, 860, 392]],   "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] },
+    { "name": "shy",        "label": "Shy",        "boxes": [[0, 20, 860, 190]],    "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] },
+    { "name": "cheerful",   "label": "Cheerful",   "boxes": [[0, 428, 1180, 594]],  "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] },
+    { "name": "surprised",  "label": "Surprised",  "boxes": [[0, 610, 120, 780]],   "idle": [0], "talk": [0] },
+    { "name": "shocked",    "label": "Shocked",    "boxes": [[0, 610, 760, 780]],   "intro": [1, 2, 1, 2, 3, 4, 5, 6, 3, 4, 5, 6], "idle": [0], "talk": [0] },
+    { "name": "sad",        "label": "Sad",        "boxes": [[0, 812, 860, 966]],   "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] },
+    { "name": "thinking",   "label": "Thinking",   "boxes": [[0, 1200, 860, 1362]], "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] },
+    { "name": "delighted",  "label": "Delighted",  "boxes": [[0, 1405, 880, 1570]], "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] },
+    { "name": "laugh",      "label": "Laughing",   "boxes": [[0, 1590, 760, 1758]], "intro": [2, 3, 4, 5, 4, 3, 4, 5, 4, 3, 2], "idle": [0], "talk": [1, 0] },
+    { "name": "determined", "label": "Determined", "boxes": [[0, 1788, 980, 1955]], "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] },
+    { "name": "pout",       "label": "Pouting",    "boxes": [[0, 1978, 900, 2145]], "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] },
+    { "name": "gasp",       "label": "Gasp",       "boxes": [[0, 2164, 880, 2330]], "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] },
+    { "name": "sly",        "label": "Sly",        "boxes": [[0, 2352, 900, 2520]], "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] },
+    { "name": "scheming", "align": "hips",   "label": "Scheming",   "boxes": [[0, 2540, 590, 2720]], "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] },
+    { "name": "pensive", "align": "hips",    "label": "Pensive",    "boxes": [[595, 2540, 1180, 2720]], "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] },
+    { "name": "fond", "align": "hips",       "label": "Fond",       "boxes": [[0, 2736, 610, 2912]], "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] },
+    { "name": "praying", "align": "hips",    "label": "Praying",    "boxes": [[690, 2740, 1110, 2912], [700, 2930, 1120, 3106]], "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] },
+    { "name": "uneasy", "align": "hips",     "label": "Uneasy",     "boxes": [[0, 2928, 610, 3100]], "idle": [0, 1, 2, 3], "talk": [4, 5, 6, 7] }
+  ]
+}

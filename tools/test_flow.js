@@ -1,0 +1,31 @@
+// Scripted check of the main loop: open C, ask the tutor something, run the code, type input into the program.
+(async function () {
+  const log = (t) => window.ACT_DEBUG && ACT_DEBUG('TEST ' + t);
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+  const until = async (fn, ms) => { const t0 = Date.now(); while (Date.now() - t0 < (ms || 60000)) { try { if (fn()) return true; } catch (e) {} await wait(250); } return false; };
+  await until(() => document.querySelector('.card[data-track="c"]'));
+  document.querySelector('.card[data-track="c"]').click();
+  await until(() => document.body.classList.contains('in-track'));
+  await wait(1500);
+  log('in track, files: ' + Object.keys(ACT.editor.getFiles()).join(','));
+  ACT.chat.send('It printed Hello, World! Can we make it ask for my name? Please just write it for me this time.');
+  await until(() => ACT.chat.busy, 5000);
+  const t0 = Date.now();
+  await until(() => !ACT.chat.busy, 240000);
+  log('tutor replied in ' + Math.round((Date.now() - t0) / 1000) + 's');
+  const last = [...document.querySelectorAll('.msg')].pop();
+  log('last message: ' + (last ? last.innerText.slice(0, 700).replace(/\n+/g, ' / ') : 'none'));
+  log('main.c now:\n' + ACT.editor.getFiles()['main.c']);
+  await wait(1000);
+  if (!ACT.output.running) ACT.app.run('run');
+  await until(() => ACT.output.running, 10000);
+  await until(() => document.querySelector('.term-input') && !document.querySelector('.term-input').hidden, 20000);
+  await wait(800);
+  log('terminal before input: ' + document.querySelector('.term-out').innerText.replace(/\n/g, ' | '));
+  await ACT.native.call('run.stdin', { text: 'Ashley\n' });
+  await until(() => !ACT.output.running, 10000);
+  await wait(500);
+  log('terminal after input: ' + document.querySelector('.term-out').innerText.replace(/\n/g, ' | '));
+  log('context sent next time:\n' + ACT.app.buildContext().slice(-900));
+  log('DONE');
+})();

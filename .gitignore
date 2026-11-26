@@ -1,0 +1,9 @@
+# Built app (made by ./build.sh)
+build.noindex/
+# macOS clutter
+.DS_Store
+# Editor and tool leftovers
+*.o
+*.map
+*.dbg
+.claude/settings.local.json

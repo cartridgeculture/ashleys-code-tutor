@@ -1,0 +1,358 @@
+{
+ "cell": [
+  158,
+  169
+ ],
+ "anchor": [
+  78,
+  169
+ ],
+ "refTop": 7,
+ "refBox": [
+  28,
+  7,
+  89,
+  162
+ ],
+ "bust": [
+  36,
+  5,
+  84,
+  84
+ ],
+ "emotions": {
+  "normal": {
+   "row": 0,
+   "frames": 8,
+   "label": "Normal",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "glum": {
+   "row": 1,
+   "frames": 8,
+   "label": "Glum",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "shy": {
+   "row": 2,
+   "frames": 8,
+   "label": "Shy",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "cheerful": {
+   "row": 3,
+   "frames": 8,
+   "label": "Cheerful",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "surprised": {
+   "row": 4,
+   "frames": 1,
+   "label": "Surprised",
+   "idle": [
+    0
+   ],
+   "talk": [
+    0
+   ]
+  },
+  "shocked": {
+   "row": 5,
+   "frames": 7,
+   "label": "Shocked",
+   "idle": [
+    0
+   ],
+   "talk": [
+    0
+   ],
+   "intro": [
+    1,
+    2,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  "sad": {
+   "row": 6,
+   "frames": 8,
+   "label": "Sad",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "thinking": {
+   "row": 7,
+   "frames": 8,
+   "label": "Thinking",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "delighted": {
+   "row": 8,
+   "frames": 8,
+   "label": "Delighted",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "laugh": {
+   "row": 9,
+   "frames": 7,
+   "label": "Laughing",
+   "idle": [
+    0
+   ],
+   "talk": [
+    1,
+    0
+   ],
+   "intro": [
+    2,
+    3,
+    4,
+    5,
+    4,
+    3,
+    4,
+    5,
+    4,
+    3,
+    2
+   ]
+  },
+  "determined": {
+   "row": 10,
+   "frames": 8,
+   "label": "Determined",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "pout": {
+   "row": 11,
+   "frames": 8,
+   "label": "Pouting",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "gasp": {
+   "row": 12,
+   "frames": 8,
+   "label": "Gasp",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "sly": {
+   "row": 13,
+   "frames": 8,
+   "label": "Sly",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "scheming": {
+   "row": 14,
+   "frames": 8,
+   "label": "Scheming",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "pensive": {
+   "row": 15,
+   "frames": 8,
+   "label": "Pensive",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "fond": {
+   "row": 16,
+   "frames": 8,
+   "label": "Fond",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "praying": {
+   "row": 17,
+   "frames": 8,
+   "label": "Praying",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "uneasy": {
+   "row": 18,
+   "frames": 8,
+   "label": "Uneasy",
+   "idle": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "talk": [
+    4,
+    5,
+    6,
+    7
+   ]
+  }
+ }
+}

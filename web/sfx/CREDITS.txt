@@ -1,0 +1,19 @@
+Sound effects from Phoenix Wright: Ace Attorney (Nintendo DS, Capcom), from The Sounds Resource
+("DS / DSi - Phoenix Wright: Ace Attorney - Miscellaneous - General Sound Effects"). For personal use in ACT.
+
+Where ACT uses them:
+  blipfemale / blipmale   dialogue text blips (by the tutor character's voice)
+  typwriter               the green date-and-place caption when a lesson starts
+  realization, lightbulb  "I get it!" moments            (tutor: <act:sfx name="realization"/>)
+  shock, supershock       dramatic reactions, with a white flash and screen shake
+  deskslam                emphasis, with a screen shake
+  happyping               a right answer
+  whoops                  a small slip
+  gavel                   a verdict-style flourish
+  gallerycheer            a lesson finished
+  evidenceshoop           the tutor put code in the editor ("added to the Court Record")
+  pageturn                switching lessons
+  selectblip / selectblip2 / selectjingle / cancel   the character select screen
+  scenechange             entering the lesson with a character
+  saveblip                saving (⌘S)
+  dink                    small UI ticks
