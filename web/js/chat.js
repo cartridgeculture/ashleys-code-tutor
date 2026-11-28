@@ -683,7 +683,7 @@
 
   async function fresh() {
     if (busy) return;
-    if (!confirm('Start a fresh conversation with the tutor? Your lessons and code stay; the tutor forgets this chat.')) return;
+    if (!(await ACT.ui.confirm('Start a fresh conversation with the tutor? Your lessons and code stay; the tutor forgets this chat.', { ok: 'Start Fresh' }))) return;
     const st = ACT.app.trackState();
     st.sessionId = ACT.util.uuid();
     st.sessionStarted = false;

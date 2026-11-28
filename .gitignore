@@ -7,3 +7,6 @@ build.noindex/
 *.map
 *.dbg
 .claude/settings.local.json
+# Rust build output and Tauri-generated files
+src-tauri/target/
+src-tauri/gen/

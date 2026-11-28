@@ -576,3 +576,16 @@ body.at-select #home, body.at-select #topbar, body.at-select #workspace, body.at
 .ab-credits { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 11px; line-height: 1.55; color: var(--fg-faint); }
 .ab-ok { margin-top: 16px; min-width: 88px; border: none; border-radius: 6px; padding: 6px 18px; background: var(--accent); color: var(--accent-fg); font-weight: 600; }
 .ab-ok:hover { background: var(--accent-hover); }
+
+/* ---------- in-app dialogs (ui.js) ---------- */
+.ui-dialog { position: fixed; inset: 0; z-index: 80; background: rgba(0,0,0,.45); display: grid; place-items: center; }
+.ui-card { width: min(420px, 90vw); padding: 18px 20px 14px; border-radius: 10px; background: var(--bg-side); border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow); color: var(--fg); }
+.ui-msg { font-size: 13.5px; line-height: 1.45; color: var(--fg-strong); white-space: pre-wrap; }
+.ui-input { width: 100%; margin-top: 12px; padding: 6px 8px; border-radius: 5px; border: 1px solid var(--border-strong); background: var(--bg-input);
+  color: var(--fg-strong); font: 13px/1.4 -apple-system, "Segoe UI", sans-serif; outline: none; user-select: text; -webkit-user-select: text; }
+.ui-input:focus { border-color: var(--accent); }
+.ui-btns { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+.ui-btn { border: 1px solid var(--border-strong); background: var(--bg-input); border-radius: 6px; padding: 5px 14px; color: var(--fg); }
+.ui-btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); font-weight: 600; }
+.ui-btn.primary.danger { background: var(--err); border-color: var(--err); color: #fff; }

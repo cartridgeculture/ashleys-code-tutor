@@ -1,11 +1,14 @@
-// Talks to the Swift side of the app: commands (with replies) and events.
+// Talks to the native side of the app (Tauri, src-tauri/src/bridge.rs): commands with replies,
+// and events from the app (menus, program output, the tutor's reply as it streams).
 (function (ACT) {
   const listeners = {};
+  const tauri = () => window.__TAURI__;
 
   function call(cmd, args) {
-    const h = window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.native;
-    if (!h) return Promise.reject(new Error('Not running inside ACT'));
-    return h.postMessage({ cmd, args: args || {} }).then((r) => (r == null ? null : JSON.parse(r)));
+    const T = tauri();
+    if (!T) return Promise.reject(new Error('Not running inside ACT'));
+    return T.core.invoke('bridge', { cmd, args: args || {} })
+      .catch((err) => { throw err instanceof Error ? err : new Error(String(err)); });
   }
 
   function on(kind, fn) { (listeners[kind] = listeners[kind] || []).push(fn); }
@@ -40,6 +43,19 @@
   function escapeHTML(s) {
     return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   }
+
+  // Events from the app arrive as one "act" event with a kind.
+  if (tauri()) tauri().event.listen('act', (e) => receive(e.payload));
+
+  // The page's title ("main.c — Lesson 1: Hello, World — Ashley's Code Tutor") is the window title.
+  document.addEventListener('DOMContentLoaded', () => {
+    const t = document.querySelector('title');
+    if (!t) return;
+    let last = '';
+    const sync = () => { if (document.title && document.title !== last) { last = document.title; call('app.setTitle', { title: last }).catch(() => {}); } };
+    new MutationObserver(sync).observe(t, { childList: true, characterData: true, subtree: true });
+    sync();
+  });
 
   ACT.native = { call, on, receive };
   ACT.store = store;

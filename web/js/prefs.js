@@ -89,7 +89,6 @@
                 <div class="pf-btns">
                   <button class="pf-btn" data-do="pick">Choose Avatar…</button>
                   <button class="pf-btn" data-do="clear" ${d.user.avatar ? '' : 'hidden'}>Remove Avatar</button>
-                  <input id="pf-file" type="file" accept="image/png,image/jpeg,image/gif,image/webp" hidden>
                 </div>
                 <div class="pf-note">The tutor calls you by this name. Your avatar shows next to your messages.</div>
               </div>
@@ -119,9 +118,12 @@
     root.querySelector('.pf-x').addEventListener('click', () => hide());
     root.querySelector('[data-do="cancel"]').addEventListener('click', () => hide());
     root.querySelector('[data-do="save"]').addEventListener('click', save);
-    root.querySelector('[data-do="pick"]').addEventListener('click', () => root.querySelector('#pf-file').click());
+    // The app's own file picker (Finder or Explorer), which returns the picture as a data URL.
+    root.querySelector('[data-do="pick"]').addEventListener('click', async () => {
+      const url = await ACT.native.call('app.pickImage').catch(() => null);
+      if (url) loadAvatar(url);
+    });
     root.querySelector('[data-do="clear"]').addEventListener('click', () => { collect(); draft.user.avatar = null; render(); });
-    root.querySelector('#pf-file').addEventListener('change', (e) => { const f = e.target.files && e.target.files[0]; if (f) loadAvatar(f); });
     root.querySelector('#pf-name').addEventListener('input', () => { collect(); root.querySelector('.pf-avatar').innerHTML = avatarHTML(); });
     root.onmousedown = (e) => { if (e.target === root) hide(); };
 
@@ -179,26 +181,22 @@
   }
 
   // Crops the picture to a square and shrinks it to 160×160, stored with your settings.
-  function loadAvatar(file) {
-    const reader = new FileReader();
-    reader.onload = () => {
-      const img = new Image();
-      img.onload = () => {
-        const size = 160;
-        const cv = document.createElement('canvas');
-        cv.width = cv.height = size;
-        const g = cv.getContext('2d');
-        const s = Math.min(img.width, img.height);
-        g.imageSmoothingQuality = 'high';
-        g.drawImage(img, (img.width - s) / 2, (img.height - s) / 2, s, s, 0, 0, size, size);
-        collect();
-        draft.user.avatar = cv.toDataURL('image/png');
-        render();
-      };
-      img.onerror = () => alert('That picture couldn\'t be opened.');
-      img.src = reader.result;
+  function loadAvatar(dataURL) {
+    const img = new Image();
+    img.onload = () => {
+      const size = 160;
+      const cv = document.createElement('canvas');
+      cv.width = cv.height = size;
+      const g = cv.getContext('2d');
+      const s = Math.min(img.width, img.height);
+      g.imageSmoothingQuality = 'high';
+      g.drawImage(img, (img.width - s) / 2, (img.height - s) / 2, s, s, 0, 0, size, size);
+      collect();
+      draft.user.avatar = cv.toDataURL('image/png');
+      render();
     };
-    reader.readAsDataURL(file);
+    img.onerror = () => ACT.ui.alert('That picture couldn\'t be opened.');
+    img.src = dataURL;
   }
 
   async function save() {

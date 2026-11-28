@@ -95,10 +95,17 @@ and search the web, but it can't edit files or run commands except through ACT.
 - **NES (6502):** not yet. It would need ca65/ld65 (the cc65 suite) and an NES emulator for the NES pane.
 
 ## Files
-- Source: `Sources/*.swift` (window, bridge, runner, tutor), `web/` (the page), `curriculum/`, `knowledge/`.
+- The app is a web page (`web/`) inside a **Tauri** shell (`src-tauri/`, Rust), so the same code can later run on
+  Windows too. `src-tauri/src/`: `main.rs` (window, menus, saving before quitting), `bridge.rs` (the page's
+  commands), `runner.rs` (building and running C/C++ in a terminal), `tutor.rs` (Claude Code), `store.rs` (the
+  data folder), `appicon.rs` (the app icon), `system.rs`, `events.rs`. Also `curriculum/`, `knowledge/`.
 - Build: `./build.sh` builds `build.noindex/ACT.app`; `./build.sh --install` also copies it to /Applications.
+  It needs Rust (installed with Homebrew's `rustup`); the first build downloads Tauri and takes a few minutes.
+  The page is copied to `build.noindex/web` (with the generated roadmaps and character data) and embedded in
+  the program when it compiles.
 - Data: `~/Library/Application Support/ACT/` (settings, each track's state, chat and lesson files).
-- Testing: `ACT_SELFTEST=<script.js> ./build.noindex/ACT.app/Contents/MacOS/ACT` injects a script into the page
+- Testing: `ACT_SELFTEST=<script.js> ./build.noindex/ACT.app/Contents/MacOS/ACT` runs a script in the page once it loads
   (see `tools/devlog.js`, `tools/test_flow.js`, and `tools/test_vn.js` / `tools/test_idle.js` for the
   character mode with a faked tutor reply); add `ACT_DATA_DIR=<folder>` to use a scratch data folder.
-- Third-party: Monaco Editor 0.52.2 (MIT), marked 12.0.2 (MIT), in `web/vendor/`.
+- Third-party: Monaco Editor 0.52.2 (MIT), marked 12.0.2 (MIT), in `web/vendor/`; Tauri 2 (MIT/Apache-2.0) and the
+  Rust libraries listed in `src-tauri/Cargo.toml`.

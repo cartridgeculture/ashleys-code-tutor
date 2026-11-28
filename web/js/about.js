@@ -6,7 +6,8 @@
   async function show() {
     root = document.getElementById('about');
     const info = await ACT.native.call('app.info').catch(() => ({}));
-    const version = info.version ? `Version ${info.version}${info.build ? ` (build ${info.build})` : ''}` : '';
+    const short = String(info.version || '').replace(/\.0$/, '');   // "0.7.0" -> "0.7"
+    const version = short ? `Version ${short}${info.build ? ` (build ${info.build})` : ''}` : '';
     root.innerHTML = `
       <div class="ab-card" role="dialog" aria-label="About Ashley's Code Tutor">
         <div class="ab-icon"></div>

@@ -416,22 +416,22 @@
   async function newFile() {
     if (!trackId) return;
     const ext = TRACKS[trackId].file.split('.').pop();
-    const name = prompt(`New file name (for example helpers.${ext === 'c' ? 'h' : ext}):`);
+    const name = await ACT.ui.prompt(`New file name (for example helpers.${ext === 'c' ? 'h' : ext}):`);
     if (!name) return;
-    if (!validName(name)) { alert('Use letters, numbers, dots, dashes and underscores only.'); return; }
-    if (!ACT.editor.createFile(name, '')) { alert(`${name} already exists.`); return; }
+    if (!validName(name)) { await ACT.ui.alert('Use letters, numbers, dots, dashes and underscores only.'); return; }
+    if (!ACT.editor.createFile(name, '')) { await ACT.ui.alert(`${name} already exists.`); return; }
     await saveNow();
   }
 
   async function deleteFile(name) {
-    if (!confirm(`Delete ${name}? It goes to the Trash.`)) return;
+    if (!(await ACT.ui.confirm(`Delete ${name}? It goes to the Trash.`, { ok: 'Delete', danger: true }))) return;
     ACT.editor.removeFile(name);
     await ACT.store.remove(`tracks/${trackId}/lessons/${lessonId}/${name}`);
   }
 
   async function resetLesson() {
     if (!trackId) return;
-    if (!confirm('Delete all of this lesson\'s files (they go to the Trash) and start it over with the tutor?')) return;
+    if (!(await ACT.ui.confirm('Delete all of this lesson\'s files (they go to the Trash) and start it over with the tutor?', { ok: 'Reset Lesson', danger: true }))) return;
     for (const n of ACT.editor.files) await ACT.store.remove(`tracks/${trackId}/lessons/${lessonId}/${n}`);
     delete state.started[lessonId];
     delete state.done[lessonId];
